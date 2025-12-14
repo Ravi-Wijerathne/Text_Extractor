@@ -22,16 +22,65 @@ This Python script extracts text from image files (JPEG, PNG, etc.) and PDF docu
   - Pillow
   - pdfplumber
   - tqdm
+  - PyMuPDF
+
+### Automatic Installation
+
+The easiest way to install all dependencies is to run:
+
+```bash
+./run_text_extractor.sh
+```
+
+### Manual Installation
 
 Install dependencies with:
 
 ```
-pip install pytesseract Pillow pdfplumber tqdm
+pip install pytesseract Pillow pdfplumber tqdm PyMuPDF
 ```
+
+Install Tesseract OCR:
+- **Ubuntu/Debian**: `sudo apt-get install tesseract-ocr`
+- **Fedora**: `sudo dnf install tesseract`
+- **Arch Linux**: `sudo pacman -S tesseract`
+- **macOS**: `brew install tesseract`
+- **Windows**: Download from [GitHub](https://github.com/tesseract-ocr/tesseract)
 
 ## Usage
 
-### Command Line
+### Quick Start (Recommended)
+
+Run the automated launcher script that handles all setup:
+
+```bash
+./run_text_extractor.sh
+```
+
+This script will:
+- ✓ Check all prerequisites and dependencies
+- ✓ Automatically install missing components
+- ✓ Present a menu to choose between GUI or CLI mode
+- ✓ Launch the selected tool
+
+### Manual Usage
+
+#### GUI Application
+
+Run the graphical user interface:
+
+```
+python text_extractor_gui.py
+```
+
+Features:
+- Easy file/folder selection with browse buttons
+- Real-time progress tracking
+- Detailed logging window
+- Visual status updates
+- Support for batch processing
+
+#### Command Line
 
 ```
 python text_extractor.py <input_path>
@@ -39,7 +88,7 @@ python text_extractor.py <input_path>
 
 - `<input_path>`: Path to a file or folder containing images/PDFs.
 
-### Example
+#### Example
 
 ```
 python text_extractor.py ./documents
