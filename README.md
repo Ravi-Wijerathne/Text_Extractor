@@ -29,6 +29,8 @@ pip install pytesseract Pillow pdfplumber tqdm PyMuPDF
 
 > On Linux/macOS, you can alternatively run `./run_text_extractor.sh` to auto-install all dependencies and launch the tool.
 
+> **Cross-platform launcher:** You can also run `python run_text_extractor.py` on any platform (Windows, macOS, Linux). It performs the same dependency checks, optional virtual-environment setup, and interactive menu as the shell script — no Bash required.
+
 ## Usage
 
 **CLI** — process a single file or an entire folder:
